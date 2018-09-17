@@ -1,5 +1,6 @@
-#include "testaordena.h"
+#include "TestaOrdena.h"
 #include "time.h"
+#include "Ordena.h"
 
 TestaOrdena::TestaOrdena()
 {

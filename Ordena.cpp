@@ -1,4 +1,4 @@
-#include "ordena.h"
+#include "Ordena.h"
 
 Ordena::Ordena()
 {

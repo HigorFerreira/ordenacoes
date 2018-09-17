@@ -1,7 +1,7 @@
 #ifndef ORDENA_H
 #define ORDENA_H
 
-#include "item.h"
+#include "Item.h"
 
 class Ordena
 {

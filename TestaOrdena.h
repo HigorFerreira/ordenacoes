@@ -1,7 +1,7 @@
 #ifndef TESTAORDENA_H
 #define TESTAORDENA_H
 
-#include"item.h"
+#include"Item.h"
 #include<iostream>
 #include<random>
 
