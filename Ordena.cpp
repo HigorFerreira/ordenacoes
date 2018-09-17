@@ -48,7 +48,12 @@ bool Ordena::selectionSort(Item **V, int n){
     }
     return false;
 }
-/*
+
+bool Ordena::mergeSort(Item ** V, int n){
+	
+}
+
+
 bool Ordena::bubbleSort(Item **V, int n){
     long int Lsup, Bolha, j;
     Item * T;
@@ -73,4 +78,7 @@ bool Ordena::bubbleSort(Item **V, int n){
 /*
 void Ordena::heapSort(Item **V, int n){
 }
+*/
+
+/*
 */

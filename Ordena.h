@@ -9,7 +9,9 @@ public:
     Ordena();
     static bool insertionSort(Item ** V, int n);
     static bool selectionSort(Item ** V, int n);
-    //static bool bubbleSort(Item ** V, int n);
+    static bool mergeSort(Item ** V, int n);
+	//static bool shellSort(Item ** V, int n);
+    static bool bubbleSort(Item ** V, int n);
     //static void heapSort(Item ** V, int n);
 };
 
