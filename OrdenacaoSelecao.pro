@@ -15,11 +15,11 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += main.cpp \
-    item.cpp \
-    ordena.cpp \
-    testaordena.cpp
+    Item.cpp \
+    Ordena.cpp \
+    TestaOrdena.cpp
 
 HEADERS += \
-    item.h \
-    ordena.h \
-    testaordena.h
+    Item.h \
+    Ordena.h \
+    TestaOrdena.h
