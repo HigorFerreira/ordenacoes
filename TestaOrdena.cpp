@@ -1,4 +1,5 @@
 #include "testaordena.h"
+#include "time.h"
 
 TestaOrdena::TestaOrdena()
 {
@@ -46,5 +47,12 @@ void TestaOrdena::copiaVetor(Item ** copia){
 }
 
 void TestaOrdena::menu(){
-
+    cout<<"Iniciando com 100\n\n";
+    time_t startTime = time(NULL);
+    preencheVetor();
+    Ordena::insertionSort(this->vetor, this->getTam());
+    mostraVetor(vetor);
+    time_t endTime = time(NULL);
+    time_t deltaTime = endTime - startTime;
+    cout<<"Tempo decorrido: "<<deltaTime<<endl;
 }
