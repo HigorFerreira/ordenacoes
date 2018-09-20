@@ -1,5 +1,6 @@
 #include <iostream>
 #include "TestaOrdena.h"
+#include "Ordena.h"
 
 using namespace std;
 
@@ -7,5 +8,10 @@ using namespace std;
 
 int main(int argc, char** argv) {
     TestaOrdena *obj = new TestaOrdena;
-    obj->menu();
+    obj->setTam(100);
+    obj->preencheVetor();
+    obj->mostraVetor(obj->getVetor());
+    cout<<"Ordenando o vetor\n\n";
+    Ordena::bubbleSort(obj->getVetor(), obj->getTam());
+    obj->mostraVetor(obj->getVetor());
 }

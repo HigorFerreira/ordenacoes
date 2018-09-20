@@ -7,6 +7,10 @@ TestaOrdena::TestaOrdena()
 
 }
 
+Item ** TestaOrdena::getVetor(){
+    return this->vetor;
+}
+
 bool TestaOrdena::setTam(int tam){
     if(tam >= 100 && tam <= 100000){
         this->tam = tam;
@@ -19,6 +23,8 @@ bool TestaOrdena::setTam(int tam){
 }
 
 int TestaOrdena::getTam() const{
+    /*this->tam = 100;
+    preencheVetor();*/
     return this->tam;
 }
 
