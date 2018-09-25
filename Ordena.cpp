@@ -49,8 +49,56 @@ bool Ordena::selectionSort(Item **V, int n){
     return false;
 }
 
-bool Ordena::mergeSort(Item ** V, int n){
-	
+void Ordena::mergeSort(Item **V, int n){
+    if(V){
+        Item **B = new Item*[n];
+        int ini = 0;
+        int fim = n-1;
+        mergeSort(V, B, ini, fim);
+        delete[] B;
+    }
+}
+
+void Ordena::mergeSort(Item **A, Item **B, int ini, int fim){
+    if(fim == ini){
+        return;
+    }
+    else{
+        int meio = (ini+fim)/2;
+        mergeSort(A, B, ini, meio);
+        mergeSort(A, B, meio+1, fim);
+        intercala(A, B, ini, meio, fim);
+        return;
+    }
+}
+
+void Ordena::intercala(Item **A, Item **B, int ini, int meio, int fim){
+    int i = ini, j = meio+1, k = ini;
+    while(i<meio+1 && j<fim+1){
+        if(A[i]->getChave() < A[j]->getChave()){
+            B[k] = A[i];
+            i++;
+            k++;
+        }
+        else{
+            B[k] = A[j];
+            k++;
+            j++;
+        }
+    }
+    while (i<meio+1) {
+       B[k] = A[i];
+       k++;
+       i++;
+    }
+    while (j<fim+1) {
+       B[k] = A[j];
+       k++;
+       j++;
+    }
+    for(int k = ini; k<fim+1; k++){
+        A[k] = B[k];
+    }
 }
 
 
