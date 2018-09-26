@@ -149,6 +149,10 @@ bool Ordena::shellSort(Item **V, int n){
     }
 }
 
+bool Ordena::quickSort(Item **V, int n){
+
+}
+
 /*
 void Ordena::heapSort(Item **V, int n){
 }
