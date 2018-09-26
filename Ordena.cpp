@@ -123,6 +123,32 @@ bool Ordena::bubbleSort(Item **V, int n){
     return true;
 }
 
+bool Ordena::shellSort(Item **V, int n){
+    int h = 1;
+
+    while(h < n){
+        h = h*3+1;
+    }
+
+    h = h/3;
+    int c, j;
+
+    while(h > 0){
+        for(int i = h; i<n; i++){
+            c = V[i]->getChave();
+            j = i;
+            while(j >= h && V[j - h]->getChave() > c){
+                V[j] = V[j - h];
+                j =  j - h;
+            }
+            Item *aux = new Item;
+            aux->setChave(j);
+            V[j] = aux;
+        }
+        h = h/2;
+    }
+}
+
 /*
 void Ordena::heapSort(Item **V, int n){
 }
