@@ -7,10 +7,6 @@ TestaOrdena::TestaOrdena()
 
 }
 
-Item ** TestaOrdena::getVetor(){
-    return this->vetor;
-}
-
 bool TestaOrdena::setTam(int tam){
     if(tam >= 100 && tam <= 100000){
         this->tam = tam;
@@ -54,4 +50,5 @@ void TestaOrdena::copiaVetor(Item ** copia){
 }
 
 void TestaOrdena::menu(){
+	//Menu será feito aqui
 }

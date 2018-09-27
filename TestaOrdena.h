@@ -13,7 +13,6 @@ class TestaOrdena
     Item **vetor;
 public:
     TestaOrdena();
-    Item ** getVetor();
     bool setTam(int);
     int getTam() const;
     void preencheVetor();
