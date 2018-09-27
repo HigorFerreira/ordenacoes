@@ -51,4 +51,50 @@ void TestaOrdena::copiaVetor(Item ** copia){
 
 void TestaOrdena::menu(){
 	//Menu será feito aqui
+    short option;
+    cout<<"===========================================\n";
+    cout<<"-------- TESTES DE ALGORITMOS -------------\n";
+    cout<<"Selecione o numero de elementos para testar\nos algoritmos de ordenacao\n\n";
+    cout<<"1 - 100\n";
+    cout<<"2 - 1000\n";
+    cout<<"3 - 10000\n";
+    cout<<"4 - 100000\n";
+    cout<<"------------------->";
+    cin>>option;
+
+    short elementos;
+    switch(option){
+        case 1:
+            elementos = 100;
+            break;
+        case 2:
+            elementos = 1000;
+            break;
+        case 3:
+            elementos = 10000;
+            break;
+        case 4:
+            elementos = 100000;
+            break;
+        default:
+            tratarEntrada();
+            break;
+    }
+
+    /* Chamada dos métodos de ordenação */
+    insertion(elementos);
+    selection(elementos);
+    merge(elementos);
+    shell(elementos);
+    //bubble(elementos);
+    quick(elementos);
+    //heap(elementos);
+}
+
+void TestaOrdena::insertion(int n){
+    cout<<"===========================================\n";
+    cout<<"Populando vetor com "<<n<<" elementos.\n";
+    TestaOrdena *o = new TestaOrdena;
+    o->setTam(n);
+    o->preencheVetor();
 }
