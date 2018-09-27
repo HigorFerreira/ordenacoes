@@ -107,7 +107,8 @@ bool Ordena::bubbleSort(Item **V, int n){
     Item * T;
 
     Lsup = n;
-    do{
+    while(Lsup > 0)
+    {
         T = 0;
         for(j = 0; j < Lsup - 1; ){
             if(V[j]->getChave() > V[j+1]->getChave()){
@@ -118,7 +119,7 @@ bool Ordena::bubbleSort(Item **V, int n){
             }
         }
         Lsup = Bolha;
-    }while(Lsup <= 0);
+    }
 
     return true;
 }
@@ -138,7 +139,7 @@ bool Ordena::shellSort(Item **V, int n){
             c = V[i]->getChave();
             j = i;
             while(j >= h && V[j - h]->getChave() > c){
-                V[j] = V[j - h];
+                V[j] = V[j - h];do
                 j =  j - h;
             }
             Item *aux = new Item;
