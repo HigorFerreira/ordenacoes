@@ -185,5 +185,34 @@ void Ordena::quickSort(Item **V, int ini, int fim){
 
 
 void Ordena::heapSort(Item **V, int n){
-	
+	int i = n/2, pai, filho, t;
+	while(true){
+		if(i>0){
+			i--;
+			t = V[i]->getChave();
+		}
+		else{
+			n--;
+			if(n==0)
+				return;
+			t = V[n]->getChave();
+			V[n] = V[0];
+		}
+		pai = i;
+		filho = i*2+1;
+		while(filho < n){
+			if(filho + 1 < n && V[filho + 1]->getChave() > V[filho]->getChave()){
+				filho++;
+			}
+			if(V[filho]->getChave() > t){
+				V[pai] = V[filho];
+				pai = filho;
+				filho = pai * 2 + 1;
+			}
+			else{
+				break;
+			}
+		}
+		V[pai]->setChave(t);
+	}
 }
