@@ -86,9 +86,9 @@ void TestaOrdena::menu(){
     selection(elementos);
     merge(elementos);
     shell(elementos);
-    //bubble(elementos);
+    bubble(elementos);
     quick(elementos);
-    //heap(elementos);
+    heap(elementos);
 }
 
 void TestaOrdena::insertion(int n){
