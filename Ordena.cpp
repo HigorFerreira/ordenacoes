@@ -159,7 +159,7 @@ void Ordena::quickSort(Item **V, int ini, int fim){
 	
 	i = ini;
 	j = fim;
-	pivo = V[(int)(n-1)/2];
+	pivo = V[(int)(ini + fim)/2];
 	while(i <= j){
 		while(V[i]->getChave() < pivo->getChave()){
 			i += 1;
