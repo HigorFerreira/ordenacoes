@@ -22,6 +22,7 @@ class TestaOrdena
     void tratarEntrada();
 public:
     TestaOrdena();
+    Item **getVector();
     bool setTam(int);
     int getTam() const;
     void preencheVetor();

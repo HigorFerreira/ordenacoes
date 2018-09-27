@@ -7,6 +7,10 @@ TestaOrdena::TestaOrdena()
 
 }
 
+Item ** TestaOrdena::getVector(){
+    return this->vetor;
+}
+
 bool TestaOrdena::setTam(int tam){
     if(tam >= 100 && tam <= 100000){
         this->tam = tam;
@@ -62,7 +66,7 @@ void TestaOrdena::menu(){
     cout<<"------------------->";
     cin>>option;
 
-    short elementos;
+    int elementos;
     switch(option){
         case 1:
             elementos = 100;
@@ -82,8 +86,8 @@ void TestaOrdena::menu(){
     }
 
     /* Chamada dos métodos de ordenação */
-    /*
     insertion(elementos);
+    /*
     selection(elementos);
     merge(elementos);
     shell(elementos);
@@ -91,6 +95,9 @@ void TestaOrdena::menu(){
     quick(elementos);
     //heap(elementos);
     */
+
+    cout<<endl<<endl;
+    menu();
 }
 
 void TestaOrdena::tratarEntrada(){
@@ -103,4 +110,8 @@ void TestaOrdena::insertion(int n){
     TestaOrdena *o = new TestaOrdena;
     o->setTam(n);
     o->preencheVetor();
+    cout<<"Ordenando vetor...\n";
+    time_t start = time(0);
+    Ordena::insertionSort(o->getVector(), o->getTam());
+    cout<<"Tempo de ordenacao: "<<difftime(time(0), start)<<" segundos"<<endl;
 }
