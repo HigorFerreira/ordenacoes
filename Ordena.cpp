@@ -150,7 +150,37 @@ bool Ordena::shellSort(Item **V, int n){
 }
 
 void Ordena::quickSort(Item **V, int n){
+	quickSort(V, 0, n-1);
+}
 
+void Ordena::quickSort(Item **V, int ini, int fim){
+	int i, j;
+	Item *pivo = new Item, *aux = new Item;
+	
+	i = ini;
+	j = fim;
+	pivo = V[(int)(n-1)/2];
+	while(i <= j){
+		while(V[i]->getChave() < pivo->getChave()){
+			i += 1;
+		}
+		while(V[j]->getChave() > pivo->getChave()){
+			j -= 1;
+		}
+		if(i <= j){
+			aux = V[i];
+			V[i] = V[j];
+			V[j] = aux;
+			i += 1;
+			j -= 1;
+		}
+	}
+	if(ini < j){
+		quickSort(V, ini, j);
+	}
+	if(i < fim){
+		quickSort(V, i, fim);
+	}
 }
 
 /*

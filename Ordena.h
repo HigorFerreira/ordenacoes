@@ -17,7 +17,8 @@ public:
     static bool shellSort(Item ** V, int n);
     static bool bubbleSort(Item ** V, int n);
     //static void heapSort(Item ** V, int n);
-    static void quickSort(Item ** V, int n);
+    static void quickSort(Item **V, int n);
+    static void quickSort(Item ** V, int ini, int fim);
 };
 
 #endif // ORDENA_H
