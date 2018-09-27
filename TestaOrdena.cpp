@@ -80,27 +80,8 @@ void TestaOrdena::menu(){
             tratarEntrada();
             break;
     }
-
-    /* Chamada dos métodos de ordenação */
-    /*
-    insertion(elementos);
-    selection(elementos);
-    merge(elementos);
-    shell(elementos);
-    bubble(elementos);
-    quick(elementos);
-    //heap(elementos);
-    */
 }
 
 void TestaOrdena::tratarEntrada(){
 
-}
-
-void TestaOrdena::insertion(int n){
-    cout<<"===========================================\n";
-    cout<<"Populando vetor com "<<n<<" elementos.\n";
-    TestaOrdena *o = new TestaOrdena;
-    o->setTam(n);
-    o->preencheVetor();
 }
