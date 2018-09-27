@@ -183,10 +183,7 @@ void Ordena::quickSort(Item **V, int ini, int fim){
 	}
 }
 
-/*
-void Ordena::heapSort(Item **V, int n){
-}
-*/
 
-/*
-*/
+void Ordena::heapSort(Item **V, int n){
+	
+}
