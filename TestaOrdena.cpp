@@ -63,6 +63,7 @@ void TestaOrdena::menu(){
     cout<<"2 - 1000\n";
     cout<<"3 - 10000\n";
     cout<<"4 - 100000\n";
+    cout<<"5 - Testar todos\n";
     cout<<"------------------->";
     cin>>option;
 
@@ -80,26 +81,44 @@ void TestaOrdena::menu(){
         case 4:
             elementos = 100000;
             break;
+        case 5:
+			elementos = -1;
+			break;    	
         default:
-            tratarEntrada();
+            elementos = -1000;
             break;
     }
 
     /* Chamada dos métodos de ordenação */
-    insertion(elementos);
+    if(elementos > 0)
+    	callAll(elementos);
+    else if(elementos == -1){
+    	elementos = 100;
+    	int i = 1;
+    	while(elementos <= 100000){
+    		cout<<"\n================================================================ TESTE-"<<i<<": "<<elementos<<" elementos.\n";
+    		callAll(elementos);
+    		cout<<"\n================================================================ FIM TESTE-"<<i<<"\n";
+    		elementos *= 10;
+    		i++;
+		}
+	}
+	else{
+		cout<<"\nESCOLHA UMA OPCAO VALIDA\n";
+	}
+
+    cout<<endl<<endl;
+    menu();
+}
+
+void TestaOrdena::callAll(int elementos){
+	insertion(elementos);
     selection(elementos);
     merge(elementos);
     shell(elementos);
     //bubble(elementos);
     quick(elementos);
     //heap(elementos);
-
-    cout<<endl<<endl;
-    menu();
-}
-
-void TestaOrdena::tratarEntrada(){
-
 }
 
 void TestaOrdena::insertion(int n){

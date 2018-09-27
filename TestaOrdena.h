@@ -19,7 +19,7 @@ class TestaOrdena
     void bubble(int);
     void heap(int);
     void quick(int);
-    void tratarEntrada();
+    void callAll(int);
 public:
     TestaOrdena();
     Item **getVector();
