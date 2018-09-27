@@ -110,6 +110,7 @@ bool Ordena::bubbleSort(Item **V, int n){
     while(Lsup > 0)
     {
         T = 0;
+        Bolha = 0;
         for(j = 0; j < Lsup; j++){
             if(V[j]->getChave() > V[j+1]->getChave()){
                 T = V[j];
