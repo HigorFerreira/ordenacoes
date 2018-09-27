@@ -82,13 +82,19 @@ void TestaOrdena::menu(){
     }
 
     /* Chamada dos métodos de ordenação */
+    /*
     insertion(elementos);
     selection(elementos);
     merge(elementos);
     shell(elementos);
     bubble(elementos);
     quick(elementos);
-    heap(elementos);
+    //heap(elementos);
+    */
+}
+
+void TestaOrdena::tratarEntrada(){
+
 }
 
 void TestaOrdena::insertion(int n){
