@@ -42,11 +42,12 @@ void TestaOrdena::mostraVetor(Item **aux){
     }
 }
 
-void TestaOrdena::copiaVetor(Item ** copia){
-    copia = new Item *[this->tam];
+Item ** TestaOrdena::copiaVetor(){
+    Item **copia = new Item *[this->tam];
     for(int i = 0; i < this->tam; i++){
         copia[i] = this->vetor[i];
     }
+    return copia;
 }
 
 void TestaOrdena::menu(){
@@ -59,10 +60,30 @@ void TestaOrdena::menu(){
     cout<<"2 - 1000\n";
     cout<<"3 - 10000\n";
     cout<<"4 - 100000\n";
+    cout<<"5 - Testar todos os casos\n";
     cout<<"------------------->";
     cin>>option;
 
-    short elementos;
+    int elementos;
+
+    //========== Vetor com o nome dos algoritmos de ordenação
+    char **algNames = new char*[7];
+
+    algNames[0] = new char[9];
+    algNames[0] = "Insertion";
+    algNames[1] = new char[9];
+    algNames[1] = "Selection";
+    algNames[2] = new char[5];
+    algNames[2] = "Merge";
+    algNames[3] = new char[5];
+    algNames[3] = "Shell";
+    algNames[4] = new char[6];
+    algNames[4] = "Bubble";
+    algNames[5] = new char[4];
+    algNames[5] = "Heap";
+    algNames[6] = new char[5];
+    algNames[6] = "Quick";
+
     switch(option){
         case 1:
             elementos = 100;
@@ -76,12 +97,11 @@ void TestaOrdena::menu(){
         case 4:
             elementos = 100000;
             break;
+        case 5:
+            elementos = -2;
+            break;
         default:
-            tratarEntrada();
+            elementos = -1;
             break;
     }
-}
-
-void TestaOrdena::tratarEntrada(){
-
 }

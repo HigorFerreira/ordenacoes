@@ -11,15 +11,13 @@ class TestaOrdena
 {
     int tam;
     Item **vetor;
-
-    void tratarEntrada();
 public:
     TestaOrdena();
     bool setTam(int);
     int getTam() const;
     void preencheVetor();
     void mostraVetor(Item ** aux);
-    void copiaVetor(Item ** copia);
+    Item ** copiaVetor();
     void menu();
 };
 
