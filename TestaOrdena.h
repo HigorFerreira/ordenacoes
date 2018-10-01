@@ -11,6 +11,8 @@ class TestaOrdena
 {
     int tam;
     Item **vetor;
+
+    void print(int, int, char**);
 public:
     TestaOrdena();
     bool setTam(int);
