@@ -12,6 +12,6 @@ int main() {
     obj->preencheVetor();
     obj->mostraVetor(obj->getVetor());
     cout<<"Ordenando o vetor\n\n";
-    Ordena::bubbleSort(obj->getVetor(), obj->getTam());
+    Ordena::heapSort(obj->getVetor(), obj->getTam());
     obj->mostraVetor(obj->getVetor());
 }

@@ -206,7 +206,7 @@ void Ordena::criarHeap(Item ** vetor, int i, int f){
     }
 }
 
-void Ordena::heapSort (Item **vetor, int tam){
+void Ordena::heapSort(Item **vetor, int tam){
     for (int i = (tam-1)/2; i>=0;i--){
         criarHeap(vetor,i,tam-1);
     }
