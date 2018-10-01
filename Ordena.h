@@ -19,6 +19,9 @@ public:
     static void heapSort(Item ** V, int n);
     static void quickSort(Item **V, int n);
     static void quickSort(Item ** V, int ini, int fim);
+
+    static void criarHeap(Item **, int, int);
+    static void heapSort (Item **vetor, int tam);
 };
 
 #endif // ORDENA_H

@@ -186,6 +186,35 @@ void Ordena::quickSort(Item **V, int ini, int fim){
 }
 
 
-void Ordena::heapSort(Item **V, int n){
-	
+void Ordena::criarHeap(Item ** vetor, int i, int f){
+    Item *pai = vetor[i];
+    int j=2*i+1;
+    while(j<=f){
+        if(j+1 <= f && vetor[j]->getChave()<vetor[j+1]->getChave())
+        {
+            j++;
+        }
+        if(pai->getChave()<vetor[j]->getChave()){
+            vetor[i]=vetor[j];
+            i=j;
+            j=2*i+1;
+        }
+        else{
+            j=f+1;
+        }
+        vetor[i]=pai;
+    }
+}
+
+void Ordena::heapSort (Item **vetor, int tam){
+    for (int i = (tam-1)/2; i>=0;i--){
+        criarHeap(vetor,i,tam-1);
+    }
+    for(int i = tam-1; i>=1;i--){
+        Item *aux;
+        aux = vetor[0];
+        vetor[0] = vetor[i];
+        vetor[i] = aux;
+        criarHeap(vetor,0,i-1);
+    }
 }
