@@ -54,7 +54,7 @@ void TestaOrdena::copiaVetor(Item ** copia){
 }
 
 void TestaOrdena::menu(){
-	//Menu será feito aqui
+	//Menu serï¿½ feito aqui
     short option;
     cout<<"===========================================\n";
     cout<<"-------- TESTES DE ALGORITMOS -------------\n";
@@ -89,7 +89,7 @@ void TestaOrdena::menu(){
             break;
     }
 
-    /* Chamada dos métodos de ordenação */
+    /* Chamada dos mï¿½todos de ordenaï¿½ï¿½o */
     if(elementos > 0)
     	callAll(elementos);
     else if(elementos == -1){
@@ -116,9 +116,9 @@ void TestaOrdena::callAll(int elementos){
     selection(elementos);
     merge(elementos);
     shell(elementos);
-    //bubble(elementos);
+    bubble(elementos);
     quick(elementos);
-    //heap(elementos);
+    heap(elementos);
 }
 
 void TestaOrdena::insertion(int n){
