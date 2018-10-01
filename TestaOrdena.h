@@ -11,9 +11,18 @@ class TestaOrdena
 {
     int tam;
     Item **vetor;
+
+    void insertion(int);
+    void selection(int);
+    void merge(int);
+    void shell(int);
+    void bubble(int);
+    void heap(int);
+    void quick(int);
+    void callAll(int);
 public:
     TestaOrdena();
-    Item ** getVetor();
+    Item **getVector();
     bool setTam(int);
     int getTam() const;
     void preencheVetor();

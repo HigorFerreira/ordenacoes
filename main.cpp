@@ -8,10 +8,5 @@ using namespace std;
 
 int main() {
     TestaOrdena *obj = new TestaOrdena;
-    obj->setTam(100);
-    obj->preencheVetor();
-    obj->mostraVetor(obj->getVetor());
-    cout<<"Ordenando o vetor\n\n";
-    Ordena::heapSort(obj->getVetor(), obj->getTam());
-    obj->mostraVetor(obj->getVetor());
+    obj->menu();
 }
